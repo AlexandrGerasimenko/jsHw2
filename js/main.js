@@ -12,9 +12,9 @@
 var letters = [];
 var string = "Backend As A Service";
 letters = string.split(' ').map(function(item) {
-  return item[0]
+  return item[0];
 });
-console.log(letters)
+console.log(letters);
 var newString = letters.join('');
 console.log(newString);
 
@@ -53,6 +53,33 @@ function isNumber(n){
         console.log( formatDate(date) ); 
       
     }else{
-        console.log("Неверный тип данных")
+        console.log("Неверный тип данных");
     }
+}
+
+
+
+// Дополнительно ( 5 баллов )
+//  Перейдите по ссылке
+
+// Откройте Chrome DevTools
+
+// В панели навигации найдите файл index01.js ( в папке js/ )
+
+// Установите breakpoint на строке вызова функции insertUserText ( строка 10 )
+
+// Перезагрузите страницу
+
+// Теперь обратите внимание на функцию testUserText
+
+// Ваша задача: обезопасить свою страницу от внедрения вредоносного кода с помощью функции валидации testUserText
+
+// функция должна вывести на страницу текст пользователя безопасным способом
+
+// ( т.е. текст должен быть выведен "as is" ( как есть ), но код не должен быть выполнен )
+
+
+function testUserText ( userText ) {
+    userText = userText.innerHtml;
+    return userText;
 }
