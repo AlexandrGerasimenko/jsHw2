@@ -80,6 +80,6 @@ function isNumber(n){
 
 
 function testUserText ( userText ) {
-    userText = userText.innerHtml;
+    userText = userText.replace('<', '').replace('>', '');
     return userText;
 }
