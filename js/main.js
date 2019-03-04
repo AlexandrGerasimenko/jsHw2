@@ -79,7 +79,8 @@ function isNumber(n){
 // ( т.е. текст должен быть выведен "as is" ( как есть ), но код не должен быть выполнен )
 
 
+
 function testUserText ( userText ) {
-    userText = userText.replace('<', '').replace('>', '');
+    userText = userText.replace(/</g,"&#60").replace(/>/g, "&#62")
     return userText;
 }
