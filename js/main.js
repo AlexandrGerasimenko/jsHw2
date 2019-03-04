@@ -81,6 +81,16 @@ function isNumber(n){
 
 
 function testUserText ( userText ) {
-    userText = userText.replace(/</g,"&#60").replace(/>/g, "&#62")
-    return userText;
+    return userText.replace(/</g,"&#60").replace(/>/g, "&#62");
 }
+
+//вариант без регулярного выражения
+
+function testUserText ( userText ) {
+    for(i=0;i<userText.length;i++){
+  userText[i]==='<' ? userText = userText.replace('<',"&#60") : userText;
+  userText[i]==='>' ? userText = userText.replace('>','&#62') : userText;
+}
+    return userText
+}
+
